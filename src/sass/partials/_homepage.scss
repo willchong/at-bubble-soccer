@@ -1,0 +1,33 @@
+.background {
+	// background: #000 url('../img/zootopia-bg.jpg') top center no-repeat;
+	@include breakpoint(medium) {
+		background-size: 1520px;
+	}
+	@include breakpoint(small) {
+		background-size: 1300px;
+	}
+	@include breakpoint(xsmall) {
+		background-size: 1000px;
+	}
+	@include breakpoint(xxsmall) {
+		background-size: 860px;
+		background-position-x: 42%;
+	}
+}
+
+.main {
+	max-width: 992px;
+	margin: 0 auto;
+	padding: 0;
+
+	.content {
+		margin: 0 auto;
+
+	}
+	
+	@include breakpoint(small) {
+
+	}
+
+
+}

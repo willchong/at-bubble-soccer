@@ -1,0 +1,36 @@
+@import "libs/normalize",
+        "libs/bootstrap",
+        "partials/constants",
+        "partials/fonts",
+        "partials/header",
+        "partials/footer",
+        "partials/thanks",
+        "partials/homepage",
+        "partials/enter";
+
+
+body {
+    padding: 0px;
+    background-color: #000;
+    font-family: "dhelmedium", sans-serif;
+}
+
+h1 {
+    color: $black;
+    font-family: "dbrooksamlight", sans-serif;
+}
+
+h2 {
+    color: $yellow;
+    font-family: "dbrooksamlight", sans-serif;
+}
+
+h3 {
+    color: $yellow;
+    font-family: "dbrooksamlight", sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+

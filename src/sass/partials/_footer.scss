@@ -1,0 +1,34 @@
+footer {
+	padding-bottom: 10px;
+	
+	.container {
+		max-width: 960px;
+		.links {
+			color: #fff;
+			opacity: 0.5;
+			font-size: 16px;
+
+			a {
+				font-family: Arial, sans-serif;
+				font-size: 16px;
+				color: #fff;
+			}
+			.right {
+				text-align: right;
+				@include breakpoint(small){
+					text-align: center;
+				}
+			}
+			.left {
+				text-align: left;
+				@include breakpoint(small){
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+
+	}
+}
