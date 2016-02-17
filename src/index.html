@@ -1,25 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">   
-    <link rel="stylesheet" href="css/style.css">
+    <!-- @@include templates/head.html -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
-
 <body>
-    <!-- @@include templates/header.html -->
-
-    <div class="background">
-        <div class="main container">
-
-        </div>
-    
-    <!-- @@include templates/footer.html -->
-    
+<!-- @@include templates/header.html -->
+<section class="video">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RpHZPJJcyHg?rel=0&showinfo=0&modestbranding=1&controls=0&autoplay=1&fs=0" frameborder="0" allowfullscreen></iframe>
+    <div class="controls">
+        <div class="down-arrow"><img src="img/1x/down-arrow.png" alt=""></div>
+        <div class="play-pause"></div>
+        <div class="sound"></div>
     </div>
+</section>
+    <div class="container">
+        <section class="intro-hex">
+            <div class="hex"><img src="img/1x/top-hex-1.png" alt=""></div>
+            <div class="hex"><img src="img/1x/top-hex-2.png" alt=""></div>
+            <div class="hex"><img src="img/1x/top-hex-3.png" alt=""></div>
+            <div class="hex"><img src="img/1x/top-hex-4.png" alt=""></div>
+            <div class="hex"><img src="img/1x/top-hex-5.png" alt=""></div>
+        </section>
 
+        <section class="intro">
+            <div class="width-whole">
+                <img class="hex-icon" src="img/1x/hexagon.png" alt="">
+                <h1>about us</h1>
+                <p>AT Bubble Soccer is Toronto's first full facility dedicated to bubble soccer and fitness! Friends and Families can book online or drop in at anytime, and enjoy pushing and shoving each other in this new competitive sport!</p>
+            </div>
+            <div class="width-85">
+                <div class="width-one-third">
+                    <h2>12,000sq<sup>2</sup> indoors!</h2>
+                    <p>Our huge indoor facility is dedicated to bubble soccer and bubble fitness. It is newly renovated with upgraded air   circulation, perfect for bubble soccer and fitness!</p>
+                </div>
+                <div class="width-one-third">
+                    <h2>3 courts! 6 vs 6</h2>
+                    <p>We house three courts, two large size and one small size. With new green synthetic turf and 4' dasher boards. Made for   bouncing and smashing!</p>
+                </div>
+                <div class="width-one-third">
+                    <h2>Events &amp;<br>Birthday Parties</h2>
+                    <p>Perfect for events! From corporate events, school events, birthdays, and any type of party! Contact us for more info!</p>
+                </div>
+            </div>
+        </section>
 
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="js/script.js"></script>
+        <section class="middle-hex">
+            <div class="hex"><img src="img/1x/middle-hex-1.png" alt=""></div>
+            <div class="hex"><img src="img/1x/middle-hex-2.png" alt=""></div>
+            <div class="hex"><img src="img/1x/middle-hex-3.png" alt=""></div>
+            <div class="hex"><img src="img/1x/middle-hex-4.png" alt=""></div>
+        </section>
+
+        <section class="info width-85">
+            <div class="width-half">
+                <h3>Pricing</h2>
+                <table>
+                    <tr>
+                        <td>TUESDAY TO THURSDAY</td>
+                        <td><strong>$17.70 + TAX</strong></td>
+                    </tr>
+                    <tr>
+                        <td>FRIDAY TO SUNDAY</td>
+                        <td><strong>$22.12 + TAX</strong></td>
+                    </tr>
+                </table>
+                <h3>Hours</h2>
+                <table>
+                    <tr>
+                        <td>MONDAY</td>
+                        <td>CLOSED</td>
+                    </tr>
+                    <tr>
+                        <td>TUESDAY</td>
+                        <td>5PM - 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>WEDNESDAY</td>
+                        <td>5PM - 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>THURSDAY</td>
+                        <td>5PM - 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>FRIDAY</td>
+                        <td>5PM - 11PM</td>
+                    </tr>
+                    <tr>
+                        <td>SATURDAY</td>
+                        <td>1PM - 11PM</td>
+                    </tr>
+                    <tr>
+                        <td>SUNDAY</td>
+                        <td>10 AM - 9PM</td>
+                    </tr>
+                    <tr>
+                        <td>DAY BEFORE HOLIDAYS</td>
+                        <td>CLOSE AT 11PM</td>
+                    </tr>
+                    <tr>
+                        <td>HOLIDAY HOURS</td>
+                        <td>10AM - 9PM</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="width-half">
+                <div class="contact-us">
+                    <h3>Contact Us</h2>
+                    <p><em>T:</em> 647.980.9080</p>
+                    <p><em>E:</em> info@atbubblesoccer.ca</p>
+                </div>
+                <form action="">
+                   <input placeholder="NAME *" type="text" name="name">
+                   <input placeholder="EMAIL *" type="email" name="email">
+                   <textarea placeholder="MESSAGE *" name="message"></textarea>
+                   <input type="submit">
+               </form>
+            </div>
+        </section>
+
+        <section class="map" id="map">
+
+        </section>
+
+        <section class="news">
+            <h2>In the news</h2>
+            <img src="img/1x/logo-blogto.png" alt="" class="logo">
+            <img src="img/1x/logo-guardian.png" alt="" class="logo">
+            <img src="img/1x/logo-torontostar.png" alt="" class="logo">
+        </section>
+
+        <section class="bottom-hex">
+            <div class="hex"><img src="img/1x/bottom-hex-1.png" alt=""></div>
+            <div class="hex"><img src="img/1x/bottom-hex-2.png" alt=""></div>
+            <div class="hex"><img src="img/1x/bottom-hex-3.png" alt=""></div>
+            <div class="hex"><img src="img/1x/bottom-hex-4.png" alt=""></div>
+            <div class="hex"><img src="img/1x/bottom-hex-5.png" alt=""></div>
+        </section>
+    </div>
+    <!-- @@include templates/footer.html -->
+
+    <!-- @@include templates/scripts.html -->
 </body>
 </html>

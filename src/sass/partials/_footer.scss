@@ -1,34 +1,23 @@
 footer {
-	padding-bottom: 10px;
-	
-	.container {
-		max-width: 960px;
-		.links {
-			color: #fff;
-			opacity: 0.5;
-			font-size: 16px;
-
-			a {
-				font-family: Arial, sans-serif;
-				font-size: 16px;
-				color: #fff;
-			}
-			.right {
-				text-align: right;
-				@include breakpoint(small){
-					text-align: center;
-				}
-			}
-			.left {
-				text-align: left;
-				@include breakpoint(small){
-					text-align: center;
+	background-color: $black;
+	color: $white;
+	font-size: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		li {
+			margin: 0 auto;
+			padding: 24px 12px;
+			font-size: 1rem;
+			display: inline-block;
+			.social {
+				svg {
+					width: 30px;
+					height: 30px;
 				}
 			}
 		}
-	}
-
-	@include breakpoint(small) {
-
 	}
 }

@@ -15,19 +15,170 @@
 	}
 }
 
-.main {
-	max-width: 992px;
-	margin: 0 auto;
-	padding: 0;
+.video {
+	width: 100%;
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	iframe, embed, object {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.controls {
+		position: absolute;
+		width: 100%;
+		bottom: 10px;
+		z-index: 101;
+		text-align: center;
+		pointer-events: none;
+		.down-arrow {
+			pointer-events: all;
+			position: relative;
+			// margin: 0 auto;
+			cursor: pointer;
+			display: inline-block;
+		}
+		.play-pause {
+			cursor: pointer;
+			pointer-events: all;
+			background: url('../img/1x/play-pause-button.png') top center no-repeat;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			right: 140px;
+			top: 6px;
+			display: inline-block;
+		}
+		.sound {
+			cursor: pointer;
+			pointer-events: all;
+			background: url('../img/1x/sound-on-off-button.png') top center no-repeat;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			right: 100px;
+			top: 6px;
+			display: inline-block;
+		}
+	}
+}
 
-	.content {
+.intro {
+	font-size: 0;
+	text-align: center;
+	.hex-icon {
+		display: block;
 		margin: 0 auto;
+		margin-bottom: 28px;
+	}
+	h1 {
+		margin-bottom: 40px;
+	}
+	p {
+		font-size: 1.5rem;
+		color: $black;
+		line-height: 1.4;
+		padding: 0 10.5%;
+		margin-bottom: 120px;
+	}
+	.width-one-third {
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 28px;
+		}
+		p {
+			font-size: 0.88rem;
+		}
+	}
+}
+
+.info {
+	font-size: 0;
+	text-align: left;
+	.width-half {
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 28px;
+		}
+		p {
+			font-size: 0.88rem;
+		}
+	}
+	table {
+		font-size: 1rem;
+		width: 100%;
+		tr {
+			td {
+				width: 50%;
+			}
+		}
+	}
+	input, textarea {
+		width: 100%;
+		height: 38px;
+		margin-bottom: 12px;
+		font-size: 0.88rem;
+		padding: 12px;
+		color: $black;
+		box-shadow: none;
+		border: 1px solid $black;
+		display: block;
+		&[type="submit"] {
+			width: auto;
+			height: 38px;
+			padding: 0px 20px;
+			text-transform: uppercase;
+			background-color: $white;
+			border: 1px solid $orange;
+			color: $orange;
+			position: absolute;
+			right: 0;
+		}
+	}
+	textarea {
+		text-align: left;
+		height: 150px;
+		line-height: 0.88rem;
+	}
+	@include placeholder {
+	    color: $black;
+	}
+	form {
+		position: relative;
+		margin-bottom: 100px;
+	}
+	.contact-us {
+		p {
+			margin: 0;
+			em {
+				color: $orange;
+				font-style: normal;
+			}
+			&:last-child {
+				margin-bottom: 40px;
+			}
+		}
 
 	}
-	
-	@include breakpoint(small) {
+}
+.map {
+	width: 100%;
+	height: 470px;
+}
 
+.news {
+	text-align: center;
+	h2 {
+		margin: 0 auto;
+		margin-top: 60px;
+		margin-bottom: 40px;
+		text-transform: none;
+		display: block;
 	}
-
-
+	img {
+		display: inline;
+	}
 }
