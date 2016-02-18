@@ -59,8 +59,8 @@ gulp.task('scripts', function() {
 gulp.task('html-replace', function() {
   	gulp.src('src/index.html')
         .pipe(htmlreplace({
-                'css': 'css/poo.css',
-                'js': 'js/wtf.js'
+                'css': 'css/style.css',
+                'js': 'js/script.js'
         }))
         .pipe(gulp.dest('src/'));
     // gulp.src('src/pages/*.html')

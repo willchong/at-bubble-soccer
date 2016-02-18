@@ -1,26 +1,77 @@
-// $(document).ready(function() {
+ var tag = document.createElement('script');
 
-// 	var resizedHeight = $('.video').width();
-// 	resizedHeight = resizedHeight*(635/992);
-// 	$('.video').css('height', resizedHeight);
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 	var resizedWidth = $('.video').width();
-// 	resizedWidth = resizedWidth*(703/992);
-// 	$('.video-footer-container').css('width', resizedWidth);
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('video', {
+    height: '100%',
+    width: '100%',
+    videoId: 'RpHZPJJcyHg',
+    playerVars: {
+        'rel': 0,
+        'showinfo': 0,
+        'modestbranding': 1,
+        'controls': 0,
+        'fs': 0,
+        'autoplay': 1
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+function onPlayerReady(event) {
 
-// });
+}
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var stopped = false;
+function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING) {
+        stopped = false;  
+        $('.play-pause').css({'background-position-y': '-24px'});
+      } else {      
+        stopped = true;
+        $('.play-pause').css({'background-position-y': '0px'});
+      }
+}
+function stopVideo() {
+  player.stopVideo();
+}
 
-// $(window).on('resize', function() {
+$('.down-arrow').on('click', function() {
 
-// 	var resizedHeight = $('.video').width();
-// 	resizedHeight = resizedHeight*(635/992);
-// 	$('.video').css('height', resizedHeight);
+    //scroll to next section
 
-// 	var resizedWidth = $('.video').width();
-// 	resizedWidth = resizedWidth*(703/992);
-// 	$('.video-footer-container').css('width', resizedWidth);
+});
 
-// });
+$('.play-pause').on('click', function() {
+
+    if (stopped == false) {
+        player.pauseVideo();
+    } else if (stopped == true) {
+        player.playVideo();
+    }
+
+});
+
+$('.sound').on('click', function() {
+
+    if (!player.isMuted()) {
+        player.mute();
+        $('.sound').css({'background-position-y': '-24px'});
+    } else if (player.isMuted()) {
+        player.unMute();
+        $('.sound').css({'background-position-y': '0px'});
+    }
+
+});
+
 
 var buffer = 300;
 
@@ -71,6 +122,6 @@ function init() {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(43.7853341, -79.4838277),
         map: map,
-        title: 'Snazzy!'
+        icon: 'img/1x/map-marker.png'
     });
 }

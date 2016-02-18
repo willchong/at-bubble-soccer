@@ -78,12 +78,20 @@ a:hover {
   width: 50%;
   display: inline-block;
   vertical-align: top;
+  @include breakpoint(small) {
+    width: 100%;
+    display: block;
+  }
 }
 
 .width-one-third {
   width: 33.3333%;
   display: inline-block;
   vertical-align: top;
+  @include breakpoint(small) {
+    width: 100%;
+    display: block;
+  }
 }
 
 .width-whole {
