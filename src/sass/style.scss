@@ -68,6 +68,10 @@ a:hover {
     text-decoration: none;
 }
 
+a:visited, a:focus {
+    text-decoration: none;
+}
+
 .container {
     width: 100%;
     max-width: 1280px;
@@ -103,4 +107,8 @@ a:hover {
     width: 85%;
     display: block;
     margin: 0 auto;
+}
+
+.vjs-hidden, .vjs-control-bar, .vjs-big-play-button {
+    display: none;
 }
