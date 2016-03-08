@@ -19,6 +19,12 @@ footer {
 					height: 30px;
 				}
 			}
+			a {
+				color: $white;
+				&:hover {
+					color: $orange;
+				}
+			}
 		}
 	}
 }

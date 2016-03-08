@@ -30,12 +30,14 @@ nav {
 				letter-spacing: 1.5px;
 				&:hover {
 				// 	box-shadow:0 0 0 1px $orange;
-					color: $orange;
+					color: $white;
+					background-color: $orange;
 				}
 				&:visited {
 					color: #fff;
 				}
 				&.social {
+					background-color: transparent;
 					padding: 10px 0px;
 					svg {
 						position: relative;
@@ -43,13 +45,16 @@ nav {
 						width: 30px;
 						height: 30px;
 						&:hover {
+							background-color: transparent;
 							stroke: $orange;
 							fill: $orange;
 							path, line {
+								background-color: transparent;	
 								stroke: $orange;
 								fill: $orange;
 							}
 							polygon {
+								background-color: transparent;	
 								stroke: $orange;
 							}
 						}
@@ -83,6 +88,10 @@ nav {
 							&:visited {
 								color: $black;
 							}
+							&:hover {
+								background-color: transparent;
+								color: $orange;
+							}
 						}
 						&:first-child {
 							a {
@@ -92,8 +101,16 @@ nav {
 						&:last-child {
 							border-bottom: none;
 						}
+
 					}
 					
+				}
+				&.more {
+					ul {
+						right: inherit;
+						width: 180px;
+						left: -50px;
+					}
 				}
 			}
 			ul {

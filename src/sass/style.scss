@@ -4,12 +4,16 @@
         "partials/header",
         "partials/footer",
         "partials/hexes",
-        "partials/homepage";
+        "partials/homepage",
+        "partials/booking",
+        "partials/rent",
+        "partials/games",
+        "partials/packages";
 
 body, html {
     padding: 0px;
     font-size: 16px;
-    background-color: #fff;
+    background-color: $black;
     font-family: 'Karla', sans-serif;
 }
 
@@ -74,8 +78,9 @@ a:visited, a:focus {
 
 .container {
     width: 100%;
-    max-width: 1280px;
+    // max-width: 1440px;
     padding: 0;
+    background-color: $white;
 }
 
 .width-half {
@@ -111,4 +116,15 @@ a:visited, a:focus {
 
 .vjs-hidden, .vjs-control-bar, .vjs-big-play-button {
     display: none;
+}
+
+em {
+    color: $orange;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.black {
+    color: $black;
+    font-weight: 700;
 }
