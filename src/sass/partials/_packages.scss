@@ -11,6 +11,7 @@
 	.intro {
 		font-size: 0;
 		text-align: left;
+		margin-bottom: 40px;
 		.hex-icon {
 			margin: 20px 0;
 		}
@@ -60,7 +61,21 @@
 			li {
 				margin: 0;
 				padding: 0;
+				margin-bottom: 8px;
 			}
+		}
+		p {
+			margin: 1rem 0 1.2rem;
+		}
+		.book-link {
+			margin-bottom: 20px;
+			display: block;
+		}
+	}
+	.corporate {
+		.book-link {
+			margin-bottom: 20px;
+			display: block;
 		}
 	}
 	.contact-us {

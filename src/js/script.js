@@ -135,7 +135,39 @@ $(window).on('scroll', function(){
 
 });
 
+// var jump=function(e)
+// {
+//    if (e){
+//        e.preventDefault();
+//        var target = $(this).attr("href");
+//    }else{
+//        var target = location.hash;
+//    }
+
+//    $('html,body').animate(
+//    {
+//        scrollTop: $(target).offset().top
+//    },500,function()
+//    {
+//        location.hash = target;
+//    });
+
+// }
+
+// $('html, body').hide();
+
 $(document).on('ready', function(){
+
+    // $("a[href^='#']").bind("click", jump);
+
+    // if (location.hash){
+    //     setTimeout(function(){
+    //         $('html, body').scrollTop(0).show();
+    //         jump();
+    //     }, 0);
+    // }else{
+    //     $('html, body').show();
+    // }
 
     $('#map').css({'pointer-events':'none'});
 
@@ -179,9 +211,22 @@ function init() {
 
     var map = new google.maps.Map(mapElement, mapOptions);
 
+    var contentString = '<div id="content" style="padding-top:6px;">'+
+          '<p style="margin:0;"><em>A:</em> 1300 Alness Street, Unit 3, Vaughan, ON L4K 2W6</p>'+
+          '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 300,
+      });
+
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(43.7853341, -79.4838277),
         map: map,
+        title: 'AT Bubble Soccer',
         icon: 'img/1x/map-marker.png'
     });
+
+    infowindow.open(map, marker);
+
 }
