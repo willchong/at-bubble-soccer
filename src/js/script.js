@@ -8,11 +8,13 @@
         url: form.attr('action'),
         data: form.serialize()
       }).done(function(data) {
-        alert('figure out success message / clear fields');
+        // alert('figure out success message / clear fields');
+        $('#contact-form label.success').show();
+        $('#contact-form').resetForm();
         // Optionally alert the user of success here...
       }).fail(function(data) {
-        console.log(data)
-        alert('failed');
+        // console.log(data)
+        alert('Oops, something went wrong with the form submission. Please try again.');
         // Optionally alert the user of an error here...
       });
     });
@@ -21,6 +23,7 @@
 })(jQuery)
 
 $('#contact-form').autosubmit();
+$('#contact-form').validate();
 
 $('.down-arrow').on('click', function() {
 
@@ -42,8 +45,6 @@ $('nav').on('click', 'a', function(event) {
     //     var body = $("html, body");
     //     body.stop().animate({scrollTop:position}, '500', 'swing');
     // }
-   
-
 });
 
 $('a[data-quick]').on('click', function(event) {

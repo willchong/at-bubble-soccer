@@ -37,6 +37,27 @@
 			}
 		}
 	}
+	.pricing {
+		p {
+			font-size: 1rem;
+			margin-bottom: 20px;
+			strong {
+				font-weight: 700;
+			}
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				font-size: 1rem;
+				font-weight: 700;
+				margin: 0;
+				padding: 0;
+				margin-bottom: 8px;
+			}
+		}
+	}
 	table {
 		margin-bottom: 40px;
 	}
