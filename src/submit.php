@@ -1,6 +1,6 @@
 <?php
 
-    $to = "will.chongster@gmail.com"; // this is your Email address
+    $to = "info@atbubblesoccer.ca"; // this is your Email address
 
 	if (isset($_POST["email"]) && !empty($_POST["email"])) {
    	

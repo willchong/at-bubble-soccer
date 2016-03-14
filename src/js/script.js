@@ -9,12 +9,16 @@
         data: form.serialize()
       }).done(function(data) {
         // alert('figure out success message / clear fields');
-        $('#contact-form label.success').show();
-        $('#contact-form').resetForm();
+        $('#contact-form label.form-success').css({'display': 'block'});
+        $('#contact-form input[type=text]').val('');
+        $('#contact-form input[type=email]').val('');
+        $('#contact-form textarea').val('');
+        $('#contact-form .loader').css({'display' : 'none'});
         // Optionally alert the user of success here...
       }).fail(function(data) {
         // console.log(data)
         alert('Oops, something went wrong with the form submission. Please try again.');
+        $('#contact-form .loader').hide();
         // Optionally alert the user of an error here...
       });
     });
@@ -22,8 +26,28 @@
   }
 })(jQuery)
 
-$('#contact-form').autosubmit();
-$('#contact-form').validate();
+var form = $( "#contact-form" );
+form.validate();
+$( "input[type=submit]" ).click(function() {
+   if (form.valid() == true) {
+        $('#contact-form').autosubmit();
+        $('#contact-form .loader').css({'display' : 'inline-block'});
+   }
+});
+
+$('.mobile button').on('click', function() {
+
+    $('.mobile .menu').css({'display':'block'});
+    $('body,html').css({'overflow':'hidden'});
+
+});
+
+$('.mobile .menu .close').on('click', function() {
+
+    $('.mobile .menu').css({'display':'none'});
+    $('body,html').css({'overflow':'auto'});
+
+});
 
 $('.down-arrow').on('click', function() {
 
@@ -159,16 +183,6 @@ $(window).on('scroll', function(){
 
 $(document).on('ready', function(){
 
-    // $("a[href^='#']").bind("click", jump);
-
-    // if (location.hash){
-    //     setTimeout(function(){
-    //         $('html, body').scrollTop(0).show();
-    //         jump();
-    //     }, 0);
-    // }else{
-    //     $('html, body').show();
-    // }
 
     $('#map').css({'pointer-events':'none'});
 
@@ -183,11 +197,11 @@ $(document).on('ready', function(){
     // console.log(calculatedHeight);
     $('section.video').attr('style', 'height:'+calculatedHeight+'px !important');
 
-    // $.scrollify({
-    //     section : ".scrollify",
-    //     sectionName : "section-name",
-    //     standardScrollElements : ".about, .info, .contact-us"
-    // });
+    var md = new MobileDetect(window.navigator.userAgent);
+
+    if (md.phone() != null) {
+        $('.video').empty();
+    }
 
 });
 

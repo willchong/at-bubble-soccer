@@ -164,4 +164,10 @@ em {
         margin: 12px 0;
         display: block;
     }
+    .loader {
+        display: none;
+        position: absolute;
+        right: 100px;
+        margin-top: 8px;
+    }
 }
