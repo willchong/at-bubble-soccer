@@ -71,11 +71,19 @@
 			margin-bottom: 80px;
 			display: block;
 		}
+		.flyer {
+			color: $black;
+			text-decoration: underline;
+		}
 	}
 	.corporate {
 		.book-link {
 			margin-bottom: 80px;
 			display: block;
+		}
+		.flyer {
+			color: $black;
+			text-decoration: underline;
 		}
 	}
 	.contact-us {

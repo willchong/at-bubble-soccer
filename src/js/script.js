@@ -42,6 +42,11 @@ $('.mobile button').on('click', function() {
 
 });
 
+$('nav.mobile .menu ul li a').on('click', function() {
+     $('.mobile .menu').css({'display':'none'});
+    $('body,html').css({'overflow':'auto'});
+});
+
 $('.mobile .menu .close').on('click', function() {
 
     $('.mobile .menu').css({'display':'none'});
