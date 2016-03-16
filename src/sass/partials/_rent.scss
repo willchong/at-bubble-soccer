@@ -1,5 +1,5 @@
 .container.rent {
-	padding-top: 120px;
+	padding-top: 92px;
 	background-color: $black;
 	line-height: 1.6;
 	.width-half {
@@ -71,6 +71,8 @@
 			tr {
 				td {
 					padding-right: 20px;
+					padding-bottom: 20px;
+					vertical-align: top;
 				}
 			}
 		}

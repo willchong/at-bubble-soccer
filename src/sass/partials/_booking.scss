@@ -1,5 +1,5 @@
 .container.booking {
-	padding-top: 120px;
+	padding-top: 92px;
 	background-color: $black;
 	line-height: 1.6;
 	.width-half {
@@ -74,7 +74,8 @@
 	.rules {
 		h4 {
 			font-size: 1rem;
-			color: $purple;
+			color: $black;
+			font-weight: 700;
 			text-transform: uppercase;
 			margin: 20px 0;
 		}

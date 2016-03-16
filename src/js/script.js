@@ -232,7 +232,7 @@ function init() {
     var map = new google.maps.Map(mapElement, mapOptions);
 
     var contentString = '<div id="content" style="padding-top:6px;">'+
-          '<p style="margin:0;"><em>A:</em> 1300 Alness Street, Unit 3, Vaughan, ON L4K 2W6</p>'+
+          '<p style="margin:0; font-size: 0.88rem; text-align: center"><em>A:</em> 1300 Alness Street, Unit 3<br>Vaughan, ON L4K 2W6</p>'+
           '</div>';
 
       var infowindow = new google.maps.InfoWindow({
@@ -241,7 +241,7 @@ function init() {
       });
 
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(43.7853341, -79.4838277),
+        position: new google.maps.LatLng(43.785729, -79.4838277),
         map: map,
         title: 'AT Bubble Soccer',
         icon: 'img/1x/map-marker.png'

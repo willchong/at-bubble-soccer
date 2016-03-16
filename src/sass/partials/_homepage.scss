@@ -94,6 +94,12 @@
 	h1 {
 		margin-bottom: 40px;
 	}
+	h2 {
+		margin-bottom: 30px;
+		@include breakpoint(small) {
+			font-size: 1.88rem;
+		}
+	}
 	p {
 		font-size: 1.5rem;
 		color: $black;
@@ -226,7 +232,7 @@
 	}
 	img {
 		display: inline;
-		margin: 0 16px;
+		margin: 16px;
 	}
 }
 

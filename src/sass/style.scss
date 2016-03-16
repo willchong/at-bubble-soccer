@@ -3,15 +3,8 @@
         "partials/constants",
         "partials/header",
         "partials/footer",
-        "partials/hexes",
-        "partials/homepage",
-        "partials/booking",
-        "partials/rent",
-        "partials/games",
-        "partials/league",
-        "partials/promos",
-        "partials/terms",
-        "partials/packages";
+        "partials/hexes";
+       
 
 body, html {
     padding: 0px;
@@ -172,3 +165,12 @@ em {
         margin-top: 8px;
     }
 }
+
+@import "partials/homepage",
+        "partials/booking",
+        "partials/rent",
+        "partials/games",
+        "partials/league",
+        "partials/promos",
+        "partials/terms",
+        "partials/packages";
