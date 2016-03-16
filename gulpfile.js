@@ -126,4 +126,4 @@ gulp.task('clean', function () {
 });
 
 gulp.task('default', ['imagemin', 'sass', 'scripts', 'extend', 'fonts', 'php', 'watch']);
-gulp.task('build', ['imagemin', 'html-replace', 'sass', 'scripts']);
+gulp.task('deploy', ['imagemin', 'sass', 'scripts', 'extend', 'fonts', 'php']);

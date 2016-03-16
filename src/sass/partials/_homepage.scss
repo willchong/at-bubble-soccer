@@ -93,11 +93,14 @@
 	}
 	h1 {
 		margin-bottom: 40px;
+		@include breakpoint(small) {
+			font-size: 1.3rem;
+		}
 	}
 	h2 {
 		margin-bottom: 30px;
 		@include breakpoint(small) {
-			font-size: 1.88rem;
+			font-size: 1.3rem;
 		}
 	}
 	p {
@@ -108,6 +111,10 @@
 		margin-bottom: 120px;
 		a {
 			color: $orange;
+		}
+		@include breakpoint(small) {
+			font-size: 1rem;
+			margin-bottom: 60px;
 		}
 	}
 	.width-one-third {
