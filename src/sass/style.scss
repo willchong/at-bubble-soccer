@@ -111,6 +111,21 @@ a:visited, a:focus {
     margin: 0 auto;
 }
 
+.width-75 {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    @include breakpoint(small) {
+      width: 100%;
+      display: block;
+    }
+}
+
+.max-width-info {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
 .vjs-hidden, .vjs-control-bar, .vjs-big-play-button {
     display: none;
 }
