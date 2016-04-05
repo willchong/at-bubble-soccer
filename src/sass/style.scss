@@ -11,6 +11,9 @@ body, html {
     font-size: 16px;
     background-color: $black;
     font-family: 'Karla', sans-serif;
+    &.sticky {
+        padding-top: 90px;
+    }
 }
 
 h1 {

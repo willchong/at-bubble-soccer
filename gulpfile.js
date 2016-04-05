@@ -94,6 +94,12 @@ gulp.task('php', function() {
         .pipe(gulpCopy('dist/'));
 });
 
+gulp.task('downloads', function() {
+    return gulp.src('*.*', {cwd: 'src/download'})
+        .pipe(gulpCopy('dist/download'));
+});
+
+
 gulp.task('imagemin', function () {
     return gulp.src(['src/img/*','src/img/*/*'])
         .pipe(imagemin({
@@ -125,5 +131,5 @@ gulp.task('clean', function () {
   ]);
 });
 
-gulp.task('default', ['imagemin', 'sass', 'scripts', 'extend', 'fonts', 'php', 'watch']);
-gulp.task('deploy', ['imagemin', 'sass', 'scripts', 'extend', 'fonts', 'php']);
+gulp.task('default', ['imagemin', 'sass', 'scripts', 'extend', 'fonts', 'php', 'downloads', 'watch']);
+gulp.task('deploy', ['imagemin', 'sass', 'scripts', 'extend', 'fonts', 'php', 'downloads']);

@@ -24,6 +24,9 @@
 	background: url('../img/1x/mobile-header.jpg') no-repeat;
 	background-size: cover;
 	height: 0;
+	@include breakpoint(small) {
+		margin-top: 60px;
+	}
 	iframe, embed, object {
 		position: absolute;
 		top: 0;

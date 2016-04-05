@@ -63,19 +63,6 @@ $('.down-arrow').on('click', function() {
 
 });
 
-$('nav').on('click', 'a', function(event) {
-
-    //scroll to next section
-    // var check = $(event.target).closest('a').hasClass('social');
-    // if (check == false) {
-    //     event.preventDefault();
-    //     var s = $(event.target).attr('data-scroll');
-    //     var position = $("."+s).offset().top;
-    //     var body = $("html, body");
-    //     body.stop().animate({scrollTop:position}, '500', 'swing');
-    // }
-});
-
 $('a[data-quick]').on('click', function(event) {
 
     event.preventDefault();
@@ -155,13 +142,30 @@ function isElementInViewport (el) {
 
 }
 
-$(window).on('scroll', function(){
+$(window).on('scroll touchmove touchstart touchend ontouchmove', function(){
 
     $('section.hexes').each(function() {
         if (isElementInViewport(this)) {
             $(this).find('.hex').addClass('fadein');
         }
     });
+
+    var position = $(window).scrollTop();
+    var threshold = $('.intro-hex').offset().top;
+    
+    $('nav.desktop').addClass('sticky');
+
+    if (position >= threshold) {
+        // $('nav.mobile').addClass('sticky');
+        // $('body').addClass('sticky');
+    } else if (position <= 0) {
+        $('nav.desktop').removeClass('sticky');
+        // $('nav.mobile').removeClass('sticky');
+        // $('body').removeClass('sticky');
+    }
+
+    // console.log(position);
+    // console.log(threshold);
 
 });
 
@@ -241,7 +245,8 @@ function init() {
       });
 
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(43.785729, -79.4838277),
+        position: new google.maps.LatLng(43.785305, -79.481908),
+        // position: new google.maps.LatLng(43.785729, -79.4838277),
         map: map,
         title: 'AT Bubble Soccer',
         icon: 'img/1x/map-marker.png'

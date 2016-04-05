@@ -2,6 +2,9 @@
 	padding-top: 92px;
 	background-color: $black;
 	line-height: 1.6;
+	@include breakpoint(small) {
+		padding-top: 70px;
+	}
 	.width-half {
 		padding-right: 36px;
 	}
