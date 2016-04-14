@@ -10,10 +10,13 @@ nav {
 		background-color: rgba(0, 0, 0, 0.75);
 		#book-button {
 			background-color: $orange;
+			&:hover {
+				background-color: $darkorange;
+			}
 		}
 	}
 	&.desktop {
-		@include breakpoint(small) {
+		@include breakpoint(special) {
 			display: none;
 		}
 		.logo {
@@ -43,6 +46,7 @@ nav {
 					// 	box-shadow:0 0 0 1px $orange;
 						color: $white;
 						background-color: $orange;
+						box-shadow:0 0 0 1px $orange;
 					}
 					&:visited {
 						color: #fff;
@@ -50,6 +54,9 @@ nav {
 					&.social {
 						background-color: transparent;
 						padding: 10px 0px;
+						&:hover {
+							box-shadow:none;
+						}
 						svg {
 							position: relative;
 							top: 8px;
@@ -79,7 +86,7 @@ nav {
 						box-shadow:0 0 0 1px $orange;
 					}
 				}
-				&:nth-child(4) {
+				&:nth-child(5) {
 					margin-right: 25px;
 					@include breakpoint(medium) {
 						margin-right: 0px;
@@ -95,6 +102,7 @@ nav {
 						right: 0;
 						background-color: $white;
 						width: 100%;
+						border: 1px solid #e7e7e7;
 						li {
 							display: block;
 							border-bottom: 1px solid $black;
@@ -105,6 +113,7 @@ nav {
 								&:hover {
 									background-color: transparent;
 									color: $orange;
+									box-shadow: none;
 								}
 							}
 							&:first-child {
@@ -115,7 +124,7 @@ nav {
 							&:last-child {
 								border-bottom: none;
 							}
-							&:nth-child(4) {
+							&:nth-child(5) {
 								margin-right: 0;
 							}
 
@@ -126,7 +135,7 @@ nav {
 						ul {
 							right: inherit;
 							width: 200px;
-							left: -68px;
+							left: -62px;
 							
 						}
 					}
@@ -160,7 +169,7 @@ nav {
 		display:none;
 		height: 60px;
 		top: 0;
-		@include breakpoint(small) {
+		@include breakpoint(special) {
 			position: fixed;
 			display:block;
 			background-color: rgba(0, 0, 0, 0.75);

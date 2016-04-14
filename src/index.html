@@ -8,7 +8,7 @@
 <body>
 <!-- @@include templates/header.html -->
 <section class="video scrollify" data-section-name="video">
-    <video id="video" class="video-js" controls autoplay preload="auto" width="100%" height="100%" data-setup="{}">
+    <video id="video" class="video-js" controls autoplay onloadstart="this.volume=0" preload="auto" width="100%" height="100%" data-setup="{}">
         <source src="video/at-bs-video.mp4" type='video/mp4'>
     </video>
     <div class="controls">
@@ -17,7 +17,7 @@
         <div class="sound"></div>
     </div>
 </section>
-    <div class="container scrollify" data-section-name="intro">
+    <div class="container scrollify homepage" data-section-name="intro">
         <section class="intro-hex hexes">
             <div class="hex"><img src="img/1x/top-hex-1.png" alt=""></div>
             <div class="hex"><img src="img/1x/top-hex-2.png" alt=""></div>
@@ -29,13 +29,14 @@
         <section class="intro about" id="about">
             <div class="width-whole">
                 <img class="hex-icon" src="img/1x/hexagon.png" alt="">
-                <h1>about us</h1>
+                <h1>AT Bubble Soccer</h1>
                 <p>AT Bubble Soccer is Toronto's first full facility dedicated to bubble soccer and fitness games! Friends and Families can book online or drop in at anytime, and enjoy pushing and shoving each other in this new competitive sport!</p>
+                <a href="booking.html"><button class="book-now">Book Now</button></a>
             </div>
             <div class="width-85">
                 <div class="width-half">
                     <h2>12,000sq<sup>2</sup> indoors!</h2>
-                    <p>Our huge indoor facility is dedicated to bubble soccer and bubble fitness game. It is newly renovated with upgraded air circulation, perfect for bubble soccer and games!</p>
+                    <p>Our huge indoor facility is dedicated to bubble soccer and bubble fitness game. It is newly renovated with upgraded air circulation, perfect for bubble soccer and games! <a href="https://www.google.ca/maps/place/1300+Alness+St,+Concord,+ON+L4K+2W6/@43.7853562,-79.4817068,3a,75y,86.86h,60.99t/data=!3m8!1e1!3m6!1snuObW9_v18UAAAQvOhAQXg!2e0!3e2!6s%2F%2Fgeo1.ggpht.com%2Fcbk%3Fpanoid%3DnuObW9_v18UAAAQvOhAQXg%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D279.99829%26pitch%3D0!7i8000!8i4000!4m7!1m4!3m3!1s0x882b2e72751a669d:0x41a1c4e84f60ca64!2s1300+Alness+St,+Concord,+ON+L4K+2W6!3b1!3m1!1s0x882b2e72751a669d:0x41a1c4e84f60ca64!6m1!1e1" target="_blank">Take the 360&deg; Tour</a>.</p>
                 </div>
                 <div class="width-half">
                     <h2>Events &amp;<br>Birthday Parties</h2>
@@ -43,7 +44,6 @@
                 </div>
             </div>
         </section>
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sca!4v1459866964387!6m8!1m7!1snuObW9_v18UAAAQvOhAQXg!2m2!1d43.78535617116204!2d-79.481706801065!3f208.9183710146516!4f-25.72692159770604!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
         <section class="middle-hex hexes">
             <div class="hex"><img src="img/1x/middle-hex-1.png" alt=""></div>
             <div class="hex"><img src="img/1x/middle-hex-2.png" alt=""></div>
@@ -56,30 +56,31 @@
                 <img class="hex-icon" src="img/1x/hexagon.png" alt="">
                 <div class="max-width-info">
                     <h1>pricing</h1>
-                    <p><strong>Packages are Pre-pay Only.</strong><br>Only 12 players will be PLAYING on the court at a time.  Extra players will be subbed     in and out.</p>
+                    <p><strong>Packages are Pre-pay Only.</strong><br>Only 12 players will be PLAYING on the court at a time. Extra players will be subbed in and out.<br>Each game lasts 50 minutes.</p>
                 </div>
                 <div class="width-75 pricing max-width-info">
                     <div class="width-half">
-                        <p><strong>FRIDAY - SATURDAY</strong></p>
+                        <p><strong>FRIDAY - SUNDAY</strong></p>
                         <ul>
-                            <li><strong>8 players pack $200 + Hst   25/p.p</strong></li>
-                            <li><strong>10 players pack $240 + Hst   24/p.p</strong></li>
-                            <li><strong>12 players pack $276 + Hst   23/p.p</strong></li>
-                            <li><strong>14 players pack $308 + Hst   22/p.p</strong></li>
-                            <li><strong>16 players pack $336 + Hst   21/p.p</strong></li>
-                            <li><strong>18 players pack $360 + Hst   20/p.p</strong></li>
-                            <li><strong>20 players pack $380 + Hst   19/p.p</strong></li>
+                            <li>8 players pack $200 + Hst  <strong>($25 per person)</strong></li>
+                            <li>10 players pack $240 + Hst <strong>($24 per person)</strong></li>
+                            <li>12 players pack $276 + Hst <strong>($23 per person)</strong></li>
+                            <li>14 players pack $308 + Hst <strong>($22 per person)</strong></li>
+                            <li>16 players pack $336 + Hst <strong>($21 per person)</strong></li>
+                            <li>18 players pack $360 + Hst <strong>($20 per person)</strong></li>
+                            <li>20 players pack $380 + Hst <strong>($19 per person)</strong></li>
                         </ul>
                     </div>
                     
                     <div class="width-half">
                         <p><strong>WEEKDAYS (TUESDAY - THURSDAY)</strong><br>
-                        <p>By appointment only</p>
-                        <p><strong>20% off Weekend Prices</strong></p>
+                        By appointment only<br>
+                        <strong>Weekday prices are 20% off Weekend Prices</strong></p>
                         <p><strong>WALK-IN</strong><br>
-                        4pm and 9pm Saturday<br>
+                        4pm on Saturdays only<br>
                         First come, First serve. No substitutes.<br>
-                        <strong>$25+Hst p.p</strong></p> 
+                        Can be booked in advance, by email or phone.
+                        <strong>$25 + Hst per person</strong></p> 
                     </div>
                 </div>
             </div>
@@ -117,7 +118,7 @@
                         </tr>
                         <tr>
                             <td>SUNDAY</td>
-                            <td>10 AM - 5PM</td>
+                            <td>10AM - 5PM</td>
                         </tr>
                     </table>
                 </div>

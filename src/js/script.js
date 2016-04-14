@@ -69,7 +69,7 @@ $('a[data-quick]').on('click', function(event) {
     console.log($(this).attr('data-quick'));
     var scrollHere = $(this).attr('data-quick');
     var body = $("html, body");
-    var position = $("."+scrollHere).offset().top;
+    var position = $("."+scrollHere).offset().top-80;
     body.stop().animate({scrollTop:position}, '500', 'swing');
 
 });
@@ -105,12 +105,12 @@ $('.play-pause').on('click', function() {
 $('.sound').on('click', function() {
 
     if (myPlayer.volume() == 1) {
-        myPlayer.volume(0);
-        $('.sound').css({'background-position-y': '-24px'});
-    } else if (myPlayer.volume() == 0) {
-        myPlayer.volume(1);
-        $('.sound').css({'background-position-y': '0px'});
-    }
+            myPlayer.volume(0);
+            $('.sound').css({'background-position-y': '-24px'});
+   } else if (myPlayer.volume() == 0) {
+       myPlayer.volume(1);
+       $('.sound').css({'background-position-y': '0px'});
+   }
 
 });
 
@@ -192,6 +192,7 @@ $(window).on('scroll touchmove touchstart touchend ontouchmove', function(){
 
 $(document).on('ready', function(){
 
+    $('.intro-hex').find('.hex').addClass('fadein');
 
     $('#map').css({'pointer-events':'none'});
 

@@ -18,6 +18,9 @@ $grey: #f3f3f3;
   @if $point == medium {
      @media (max-width: 991px)  { @content ; }
   }
+  @if $point == special {
+     @media (max-width: 860px)  { @content ; }
+  }
 }
 
 
