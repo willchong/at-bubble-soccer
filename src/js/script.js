@@ -210,7 +210,7 @@ $(document).on('ready', function(){
     var md = new MobileDetect(window.navigator.userAgent);
 
     if (md.phone() != null) {
-        $('.video').empty();
+        $('#video').empty();
     }
 
 });
